@@ -45,6 +45,7 @@ pipeline {
               TOMCAT = credentials('tomcat_user')
             }
             
+            
             steps {
                 sh 'echo publish stage'
                 archiveArtifacts artifacts: 'target/**/*.war', fingerprint: true
