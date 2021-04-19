@@ -31,7 +31,7 @@ pipeline {
                 '''
                 sh 'mvn package'
 
-                /*script {
+                script {
                     sshPublisher(continueOnError: false, failOnError: true,
                     publishers: [
                         sshPublisherDesc(
@@ -46,7 +46,7 @@ pipeline {
                             ]
                         )
                     ])
-                }*/
+                }
             }
         }
         stage('UAT test') {
